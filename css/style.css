@@ -1903,10 +1903,13 @@ input {
     flex-direction: column;
     position: fixed;
     inset: var(--nav-h) 0 0;
-    background: rgba(10, 14, 26, 0.97);
+    background: #0a0e1a;
+    /* solid background */
     padding: 2rem;
     align-items: flex-start;
     gap: 1.5rem;
+    z-index: 100;
+    /* to prevent overlapping with content */
   }
 
   .nav-links.open {
@@ -1915,6 +1918,20 @@ input {
 
   .nav-toggle {
     display: flex;
+    z-index: 101;
+    /* Stay above nav menu */
+  }
+
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .hero-counters {

@@ -103,10 +103,16 @@ function initNav() {
     const navLinksContainer = document.getElementById('nav-links');
     const sections = document.querySelectorAll('section[id]');
 
-    // Scrolled class
+    // Scrolled class and auto-close on scroll
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 60);
         updateActiveLink();
+
+        // Close mobile nav automatically on scroll
+        if (navLinksContainer?.classList.contains('open') && window.scrollY > 10) {
+            navLinksContainer.classList.remove('open');
+            navToggle?.classList.remove('open');
+        }
     }, { passive: true });
 
     // Active section highlight
@@ -130,6 +136,7 @@ function initNav() {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 // Close mobile nav
                 navLinksContainer?.classList.remove('open');
+                navToggle?.classList.remove('open');
             }
         });
     });
@@ -137,5 +144,6 @@ function initNav() {
     // Mobile hamburger toggle
     navToggle?.addEventListener('click', () => {
         navLinksContainer?.classList.toggle('open');
+        navToggle?.classList.toggle('open');
     });
 }
