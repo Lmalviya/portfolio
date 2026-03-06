@@ -652,7 +652,7 @@ input {
 
 .about-photo {
   width: 260px;
-  height: 260px;
+  height: 340px;
   object-fit: cover;
   border-radius: var(--radius-md);
   border: 2px solid var(--border);
@@ -662,7 +662,7 @@ input {
 
 .about-photo-fallback {
   width: 260px;
-  height: 260px;
+  height: 340px;
   background: var(--accent-violet-dim);
   border: 2px solid var(--border-hover);
   border-radius: var(--radius-md);
