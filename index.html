@@ -1,1 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lakhan Malviya — Machine Learning Engineer</title>
+    <meta name="description"
+        content="Portfolio of Lakhan Malviya, Machine Learning Engineer and Applied Scientist. IISc alumni. LLM fine-tuning, RAG systems, multi-agent AI, and MLOps." />
+    <meta property="og:title" content="Lakhan Malviya — Machine Learning Engineer" />
+    <meta property="og:description"
+        content="MLE at Skyfall AI. IISc M.Tech. Expert in LLMs, multi-agent systems, and production AI." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0a0e1a" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ═══ AMBIENT BLOBS (float in background) ═══ -->
+    <div class="ambient-blob blob-1" aria-hidden="true"></div>
+    <div class="ambient-blob blob-2" aria-hidden="true"></div>
+    <div class="ambient-blob blob-3" aria-hidden="true"></div>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" style="letter-spacing: 0;">
+                Lakhan<span style="color:var(--accent-cyan); font-weight:900;">.</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blogs" class="nav-link">Writing</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+                <li><a href="#achievements" class="nav-link">Awards</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1cTSzOXw2MV_iVQ0jyfvZpVDTxyzcN-wn/view?usp=drive_link"
+                        class="btn btn-sm" target="_blank" rel="noopener">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Resume
+                    </a>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="hero">
+        <canvas id="neural-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge fade-up">
+                <span class="pulse-dot"></span>
+                Open to full-time AI/ML roles
+            </div>
+            <h1 class="hero-name fade-up">
+                Lakhan<br />
+                <span class="gradient-text">Malviya</span>
+            </h1>
+            <div class="hero-role fade-up">
+                <span class="role-prefix">I build</span>
+                <span class="typed-text" id="typed-text"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-bio fade-up">
+                Machine Learning Engineer &amp; Applied Scientist. IISc M.Tech alumnus.<br />
+                Specializing in <strong>multi-agent AI</strong>, <strong>LLM fine-tuning</strong>, and
+                <strong>production AI pipelines</strong>.
+            </p>
+            <div class="hero-counters fade-up" id="hero-counters">
+                <div class="counter-item">
+                    <span class="counter-num" data-target="3">0</span><span class="counter-suffix">+</span>
+                    <span class="counter-label">Years Experience</span>
+                </div>
+                <div class="counter-divider"></div>
+                <div class="counter-item">
+                    <span class="counter-num" data-target="14">0</span><span class="counter-suffix">+</span>
+                    <span class="counter-label">GitHub Projects</span>
+                </div>
+                <div class="counter-divider"></div>
+                <div class="counter-item">
+                    <span class="counter-num" data-target="50">0</span><span class="counter-suffix">%+</span>
+                    <span class="counter-label">Incident Time Saved</span>
+                </div>
+                <div class="counter-divider"></div>
+                <div class="counter-item">
+                    <span class="counter-num" data-target="104">0</span><span class="counter-suffix">+</span>
+                    <span class="counter-label">LeetCode Solved</span>
+                </div>
+                <div class="hero-actions fade-up">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-socials fade-up">
+                <a href="https://github.com/Lmalviya" target="_blank" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/lakhan-malviya/" target="_blank" class="social-link"
+                    aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="https://medium.com/@lmalviya" target="_blank" class="social-link" aria-label="Medium">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                    </svg>
+                </a>
+                <a href="https://leetcode.com/u/lakhan_22/" target="_blank" class="social-link" aria-label="LeetCode">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">01 / About</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-photo-col reveal">
+                    <div class="about-photo-wrap">
+                        <div class="about-photo-bg"></div>
+                        <img src="assets/profile.jpg" alt="Lakhan Malviya" class="about-photo"
+                            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                        <div class="about-photo-fallback" style="display:none"><span>LM</span></div>
+                    </div>
+                    <div class="about-edu-cards">
+                        <div class="edu-card glass-card reveal">
+                            <div class="edu-icon">🎓</div>
+                            <div class="edu-info">
+                                <strong>M.Tech — Computer Science</strong>
+                                <span>Indian Institute of Science (IISc), Bangalore</span>
+                                <span class="edu-year">July 2021 – June 2023</span>
+                            </div>
+                        </div>
+                        <div class="edu-card glass-card reveal">
+                            <div class="edu-icon">🏫</div>
+                            <div class="edu-info">
+                                <strong>B.E. — Computer Science</strong>
+                                <span>MITS, Gwalior</span>
+                                <span class="edu-year">July 2016 – June 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content-col">
+                    <p class="about-bio reveal">
+                        I'm an ML Engineer and Applied Scientist who turns cutting-edge AI research into
+                        production-grade systems. Currently building <strong>multi-agent AI systems</strong> at
+                        <strong>Skyfall AI</strong>,
+                        and previously did LLM security and privacy research at <strong>PrivaSapien</strong>.
+                    </p>
+                    <p class="about-bio reveal">
+                        My work spans <strong>multi-agent orchestration</strong> (MCP, CrewAI, LangChain), <strong>LLM
+                            fine-tuning</strong>
+                        (LoRA, QLoRA, RLHF), <strong>enterprise AI automation</strong> (Okta, SAP, ServiceNow), and
+                        <strong>LLM security layers</strong>. Co-author of a patent in AI governance, and recipient of
+                        Narayana Murthy's <em>"Above and Beyond"</em> award.
+                    </p>
+                    <div class="skills-section reveal">
+                        <h3 class="skills-title">Technical Skills</h3>
+                        <div class="skills-groups" id="skills-groups">
+                            <div class="skill-group">
+                                <span class="skill-group-label">LLMs &amp; Fine-Tuning</span>
+                                <div class="skill-tags">
+                                    <span class="badge">LoRA / QLoRA</span>
+                                    <span class="badge">RLHF / DPO</span>
+                                    <span class="badge">RAG</span>
+                                    <span class="badge">Instruction Tuning</span>
+                                    <span class="badge">Model Quantization</span>
+                                    <span class="badge">PEFT</span>
+                                    <span class="badge">Prompt Engineering</span>
+                                    <span class="badge">HuggingFace PEFT</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <span class="skill-group-label">Deep Learning &amp; NLP</span>
+                                <div class="skill-tags">
+                                    <span class="badge">PyTorch</span>
+                                    <span class="badge">BERT / GPT / LLaMA</span>
+                                    <span class="badge">CNNs / RNNs / LSTM</span>
+                                    <span class="badge">GANs</span>
+                                    <span class="badge">Pruning &amp; Quantization</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <span class="skill-group-label">MLOps &amp; Cloud</span>
+                                <div class="skill-tags">
+                                    <span class="badge">Docker</span>
+                                    <span class="badge">Kubernetes</span>
+                                    <span class="badge">AWS (S3/EC2/SageMaker/Bedrock)</span>
+                                    <span class="badge">CI/CD</span>
+                                    <span class="badge">RabbitMQ</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <span class="skill-group-label">Languages</span>
+                                <div class="skill-tags">
+                                    <span class="badge badge-accent">Python</span>
+                                    <span class="badge badge-accent">SQL</span>
+                                    <span class="badge badge-accent">C++</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <span class="skill-group-label">Agentic AI &amp; Orchestration</span>
+                                <div class="skill-tags">
+                                    <span class="badge">LangChain</span>
+                                    <span class="badge">LlamaIndex</span>
+                                    <span class="badge">CrewAI</span>
+                                    <span class="badge">MCP</span>
+                                    <span class="badge">Pydantic AI</span>
+                                    <span class="badge">Agentic Workflows</span>
+                                    <span class="badge">Tool Use</span>
+                                    <span class="badge">Multi-Agent Systems</span>
+                                    <span class="badge">ReAct / CoT</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <span class="skill-group-label">Classical ML</span>
+                                <div class="skill-tags">
+                                    <span class="badge">XGBoost</span>
+                                    <span class="badge">SVM</span>
+                                    <span class="badge">Scikit-learn</span>
+                                    <span class="badge">HuggingFace</span>
+                                    <span class="badge">Feature Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+    <section class="section section-dark" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">02 / Experience</span>
+                <h2 class="section-title">Work History</h2>
+            </div>
+            <div class="timeline" id="timeline">
+
+                <!-- Skyfall AI -->
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Machine Learning Engineer</h3>
+                                <a href="https://skyfall.ai" target="_blank" class="timeline-company">Skyfall AI —
+                                    Bengaluru</a>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">May 2025 – Present</span>
+                                <span class="badge badge-glow">Current</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Designed and implemented a <strong>multi-agent AI system with MCP-based
+                                    orchestration</strong> to automate IT operations, enabling intelligent task
+                                decomposition, agent coordination, and natural language–driven workflows deployed in a
+                                scalable, event-driven production architecture.</li>
+                            <li>Built <strong>LLM-powered agents</strong> for incident management, access control, and
+                                operational decision-making across enterprise systems (<strong>Okta, SAP,
+                                    ServiceNow</strong>), automating complex ERP, EDI, and warehouse workflows and
+                                reducing incident resolution time by <strong>over 50%</strong> in internal benchmarks.
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="badge">MCP</span>
+                            <span class="badge">LLM Agents</span>
+                            <span class="badge">SAP/ServiceNow</span>
+                            <span class="badge">Event-Driven Arch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PrivaSapien Applied Scientist 2 -->
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Applied Scientist 2</h3>
+                                <span class="timeline-company">PrivaSapien — Bengaluru</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">July 2023 – April 2025</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li><strong>Responsible AI Orchestrator (RAO):</strong> Designed an agentic workflow
+                                integrating <strong>LLaMA-2 fine-tuning with QLoRA</strong>, built intelligent agents
+                                using LangChain, CrewAI, and Pydantic, automated end-to-end orchestration, improving
+                                productivity by <strong>5×</strong>.</li>
+                            <li><strong>PrivaGPT – LLM Security Layer:</strong> Developed a firewall-like security layer
+                                with sensitive entity detection, masking, encryption, and remapping. Fine-tuned
+                                <strong>DeBERTa-v3 with GLiNER</strong>, boosting entity detection precision by 8%
+                                (Hindi) and 5% (English), supporting Arabic and 10+ Indian languages.
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="badge">QLoRA</span>
+                            <span class="badge">LLM Security</span>
+                            <span class="badge">CrewAI</span>
+                            <span class="badge">NER</span>
+                            <span class="badge">Flask Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ PROJECTS ═══════════════ -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">03 / Projects</span>
+                <h2 class="section-title">What I've Built</h2>
+            </div>
+            <div class="project-filters reveal" id="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="llm">LLM / Agents</button>
+                <button class="filter-btn" data-filter="ml">ML / CV</button>
+                <button class="filter-btn" data-filter="mlops">MLOps / Infra</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <div class="projects-loading">
+                    <div class="loading-spinner"></div>
+                    <span>Fetching from GitHub...</span>
+                </div>
+            </div>
+            <div class="projects-cta reveal">
+                <a href="https://github.com/Lmalviya" target="_blank" class="btn btn-outline">
+                    View All on GitHub
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ BLOGS ═══════════════ -->
+    <section class="section section-dark" id="blogs">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">04 / Writing</span>
+                <h2 class="section-title">Research Articles</h2>
+                <p class="section-subtitle">Deep dives into cutting-edge AI research — published on Medium.</p>
+            </div>
+            <div class="blogs-grid" id="blogs-grid"></div>
+            <div class="blogs-cta reveal">
+                <a href="https://medium.com/@lmalviya" target="_blank" class="btn btn-outline">
+                    Read More on Medium
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ STATS ═══════════════ -->
+    <section class="section" id="stats">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">05 / Metrics</span>
+                <h2 class="section-title">By The Numbers</h2>
+            </div>
+            <div class="stats-grid">
+                <!-- LeetCode -->
+                <div class="stats-card glass-card reveal">
+                    <div class="stats-card-header">
+                        <svg class="stats-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+                        </svg>
+                        <h3>LeetCode</h3>
+                    </div>
+                    <div class="lc-stats">
+                        <div class="lc-donut-wrap">
+                            <canvas id="lc-donut" width="140" height="140"></canvas>
+                            <div class="lc-total"><span class="lc-total-num">104</span><span
+                                    class="lc-total-label">Solved</span></div>
+                        </div>
+                        <div class="lc-breakdown">
+                            <div class="lc-diff"><span class="lc-dot lc-easy"></span><span
+                                    class="lc-label">Easy</span><span class="lc-count">46</span></div>
+                            <div class="lc-diff"><span class="lc-dot lc-medium"></span><span
+                                    class="lc-label">Medium</span><span class="lc-count">58</span></div>
+                            <div class="lc-diff"><span class="lc-dot lc-hard"></span><span
+                                    class="lc-label">Hard</span><span class="lc-count">0</span></div>
+                        </div>
+                    </div>
+                    <div class="lc-skills">
+                        <span class="badge">Dynamic Programming</span>
+                        <span class="badge">Arrays</span>
+                        <span class="badge">Two Pointers</span>
+                        <span class="badge">Backtracking</span>
+                    </div>
+                    <a href="https://leetcode.com/u/lakhan_22/" target="_blank" class="stats-link">View Profile →</a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="stats-card glass-card reveal">
+                    <div class="stats-card-header">
+                        <svg class="stats-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                        <h3>GitHub</h3>
+                    </div>
+                    <div class="gh-stats-custom"
+                        style="display:flex; flex-direction:column; gap:1rem; margin-bottom:1.5rem; margin-top:1rem;">
+                        <div
+                            style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.05);">
+                            <div
+                                style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.25rem;">
+                                Total Projects</div>
+                            <div
+                                style="font-size:1.5rem; font-weight:600; color:var(--text-bright); font-family:var(--font-mono);">
+                                14+</div>
+                        </div>
+                        <div
+                            style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.05);">
+                            <div
+                                style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.25rem;">
+                                Top Languages</div>
+                            <div style="font-size:1rem; font-weight:500; color:var(--text-bright);">Python • TypeScript
+                                • Jupyter</div>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Lmalviya" target="_blank" class="stats-link">View GitHub →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ACHIEVEMENTS ═══════════════ -->
+    <section class="section section-dark" id="achievements">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">06 / Recognition</span>
+                <h2 class="section-title">Achievements &amp; Awards</h2>
+            </div>
+            <div class="achievements-grid">
+
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon">📜</div>
+                    <div class="achievement-body">
+                        <h3 class="achievement-title">Co-authored Patent</h3>
+                        <p class="achievement-desc">"System and method to evaluate risks associated with an AI platform
+                            and governance" — filed at PrivaSapien. Covers AI risk evaluation and governance frameworks.
+                        </p>
+                        <span class="badge">AI Governance</span>
+                    </div>
+                </div>
+
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-body">
+                        <h3 class="achievement-title">"Above and Beyond" Award</h3>
+                        <p class="achievement-desc">Personally awarded by <strong>Narayana Murthy</strong> (Infosys
+                            Founder) at PrivaSapien for delivering innovative AI solutions that exceeded expectations
+                            and created measurable business impact.</p>
+                        <span class="badge badge-glow">Narayana Murthy Award</span>
+                    </div>
+                </div>
+
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon">👥</div>
+                    <div class="achievement-body">
+                        <h3 class="achievement-title">Team Lead — Privacy Threat Modeling</h3>
+                        <p class="achievement-desc">Led the Privacy Threat Modeling team at PrivaSapien, coordinating
+                            research and engineering efforts to build privacy-preserving AI systems that comply with
+                            enterprise data protection standards.</p>
+                        <span class="badge">Team Leadership</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-hero reveal">
+                <span class="section-label">07 / Contact</span>
+                <h2 class="contact-big-text">
+                    Let's build something<br />
+                    <span class="gradient-text">remarkable together.</span>
+                </h2>
+                <p class="contact-sub reveal">
+                    Open to full-time ML Engineering and AI Research roles.<br />
+                    Also happy to discuss research collaborations or interesting AI problems.
+                </p>
+                <div class="contact-cta-row reveal">
+                    <a href="mailto:lmalviya4797@gmail.com" class="btn btn-primary contact-email-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        lmalviya4797@gmail.com
+                    </a>
+                    <a href="tel:+917869521264" class="btn btn-outline contact-email-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18L6.51 2a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        +91 7869521264
+                    </a>
+                    <a href="https://drive.google.com/file/d/1cTSzOXw2MV_iVQ0jyfvZpVDTxyzcN-wn/view?usp=drive_link"
+                        class="btn btn-outline" target="_blank" rel="noopener">View / Download Resume</a>
+                </div>
+                <div class="contact-social-strip reveal">
+                    <a href="https://github.com/Lmalviya" target="_blank" class="contact-social-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/lakhan-malviya/" target="_blank" class="contact-social-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://medium.com/@lmalviya" target="_blank" class="contact-social-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                        </svg>
+                        Medium
+                    </a>
+                    <a href="https://leetcode.com/u/lakhan_22/" target="_blank" class="contact-social-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+                        </svg>
+                        LeetCode
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed &amp; built by <span class="gradient-text">Lakhan Malviya</span> &nbsp;·&nbsp; <a
+                    href="https://github.com/Lmalviya/portfolio" target="_blank">View Source</a></p>
+        </div>
+    </footer>
+
+    <!-- ═══════════════ CHATBOT WIDGET ═══════════════ -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open AI assistant">
+            <svg class="chatbot-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+            <svg class="chatbot-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="display:none">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+            <span class="chatbot-label">Ask about me</span>
+        </button>
+        <div class="chatbot-panel glass-card" id="chatbot-panel" style="display:none">
+            <div class="chatbot-header">
+                <div class="chatbot-avatar">LM</div>
+                <div>
+                    <strong>Lakhan's AI Assistant</strong>
+                    <span class="chatbot-status"><span class="pulse-dot"></span> Online</span>
+                </div>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="chat-msg bot-msg">
+                    👋 Hi! I'm Lakhan's assistant. Ask me anything about his background, projects, or experience!
+                </div>
+                <div class="chatbot-suggestions">
+                    <button class="suggestion-chip" data-q="What is your current role?">Current role?</button>
+                    <button class="suggestion-chip" data-q="What are your top projects?">Top projects?</button>
+                    <button class="suggestion-chip" data-q="What is your educational background?">Education?</button>
+                    <button class="suggestion-chip" data-q="What awards have you received?">Awards?</button>
+                </div>
+            </div>
+            <div class="chatbot-input-row">
+                <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Ask something..." />
+                <button class="chatbot-send" id="chatbot-send" aria-label="Send">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════ SCRIPTS ═══════════════ -->
+    <script type="module" src="js/main.js?v=2"></script>
+</body>
+
+</html>
