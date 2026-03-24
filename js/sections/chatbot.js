@@ -5,7 +5,7 @@
 const FAQ = [
     {
         keys: ['role', 'job', 'work', 'current', 'doing', 'position', 'title'],
-        answer: "I'm currently working as a **Machine Learning Engineer at Skyfall AI** (May 2025–Present). Before that, I was a Research Scientist at PrivaSapien for about 2 years, focusing on privacy-preserving ML."
+        answer: "I'm currently a **Machine Learning Engineer at Skyfall.ai** (May 2025–Present), building multi-agent AI systems with MCP-based tool orchestration across Okta, SAP, and ServiceNow. Before that, I was an **Applied Scientist-2 at PrivaSapien** (July 2023–April 2025), working on LLM fine-tuning and AI security layers."
     },
     {
         keys: ['education', 'study', 'degree', 'university', 'iisc', 'college', 'mtech', 'background'],
@@ -13,11 +13,11 @@ const FAQ = [
     },
     {
         keys: ['project', 'built', 'make', 'github', 'code', 'repo', 'portfolio'],
-        answer: "My top projects include:\n• **Transformers from Scratch** — built the full architecture from basic principles\n• **AI Pull Request Reviewer** — LLM-based code review automation\n• **Classical ML Systems** — comprehensive implementations from scratch\n• **Machine Translation** — neural MT with attention\nAll available on my GitHub!"
+        answer: "My top projects include:\n• **AI-Powered Pull Request Review System** — distributed LLM agent (Llama 3.2 via Ollama) with chunk-level parallelism, RabbitMQ, containerized with Docker. Capacity-modeled for ~120 PRs/hour.\n• **Pull Request Pilot** — advanced AI code reviewer with Tiny Chunking, Tree-sitter AST, multi-model support\n• **Nexus** — self-hosted multi-tenant AI chat platform with full RAG pipeline and Redis-based long-context memory\nAll available on my GitHub!"
     },
     {
         keys: ['skill', 'tech', 'stack', 'language', 'framework', 'tool', 'use'],
-        answer: "My core stack:\n• **LLMs**: LoRA/QLoRA, RAG, LangChain, HuggingFace, LLaMA\n• **ML**: PyTorch, TensorFlow, scikit-learn\n• **MLOps**: Docker, MLflow, FastAPI, GitHub Actions\n• **Languages**: Python (primary), SQL, Bash, JavaScript\n• **Vector DBs**: Pinecone, Chroma, FAISS"
+        answer: "My core stack:\n• **LLM & Fine-tuning**: PyTorch, HuggingFace, LoRA/QLoRA, PEFT, RLHF, Instruction Tuning, LLaMA, BERT, GPT\n• **Agentic AI**: LangChain, LangGraph, MCP, RAG, Multi-Agent Systems\n• **MLOps & Cloud**: Docker, AWS (Lambda/S3/EC2), CI/CD, RabbitMQ\n• **Languages**: Python, SQL, C++\n• **Classical ML**: XGBoost, SVM, Scikit-learn"
     },
     {
         keys: ['blog', 'article', 'write', 'medium', 'publish', 'research'],
@@ -41,7 +41,7 @@ const FAQ = [
     },
     {
         keys: ['intern', 'internship', 'fresher', 'experience', 'years'],
-        answer: "I have **3+ years of combined industry experience** — 2 years as a Research Scientist at PrivaSapien and currently as an MLE at Skyfall AI. I also did substantial research during my M.Tech at IISc."
+        answer: "I have **~3 years of industry experience** — almost 2 years as an **Applied Scientist-2 at PrivaSapien** (LLM fine-tuning, AI security layers) and currently as an **ML Engineer at Skyfall.ai** (multi-agent systems). I also did substantial research during my M.Tech at IISc Bangalore."
     },
     {
         keys: ['hello', 'hi', 'hey', 'who', 'lakhan', 'you', 'about'],
